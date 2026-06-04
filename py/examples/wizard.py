@@ -1,7 +1,7 @@
 # Wizard
 # Create a multi-step #wizard using #form cards.
 # ---
-from h2o_wave import Q, ui, main, app
+from h2o_wave import Q, ui, app
 
 
 @app('/demo')

@@ -7,6 +7,7 @@ import time
 import concurrent.futures
 from threading import Event
 from h2o_wave import main, app, Q, ui
+from typing import Union
 
 
 # This takes a lot of time (compute heavy).
@@ -34,7 +35,7 @@ async def show_cancel(q: Q):
     await q.page.save()
 
 
-async def update_ui(q: Q, value: int):
+async def update_ui(q: Q, value: Union[int, float]):
     q.page['form'].progress.value = value
     await q.page.save()
 
